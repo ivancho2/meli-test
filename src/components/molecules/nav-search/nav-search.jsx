@@ -19,7 +19,7 @@ export const NavSearch = () => {
       <input
         name="search"
         required
-        tabIndex="2"
+        tabIndex
         type="text"
         placeholder="Nunca dejes de buscar"
         maxLength="120"
@@ -31,7 +31,7 @@ export const NavSearch = () => {
         className={styles['nav-search-input']}
         defaultValue={search}
       />
-      <button tabIndex="3" type="submit" className={styles['nav-search-btn']}>
+      <button tabIndex type="submit" className={styles['nav-search-btn']}>
         <span className={styles['nav-search-btn-icon']}>
           <Image src="/assets/icons/ic-search.png" alt="Lupa" layout="fill" />
         </span>

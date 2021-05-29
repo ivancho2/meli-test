@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <header className={styles['main-header']}>
       <nav className={styles['main-header-nav']}>
-        <ToHome tabIndex="1" className={styles['to-home']} />
+        <ToHome tabIndex className={styles['to-home']} />
         <NavSearch />
       </nav>
     </header>
