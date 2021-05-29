@@ -1,0 +1,20 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  background: var(--color-yellow-turbo);
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: var(--padding-gap);
+    .to-home {
+      display: flex;
+      width: 10%;
+      min-width: 60px;
+      max-width: 100px;
+    }
+  }
+}
