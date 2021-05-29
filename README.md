@@ -62,3 +62,16 @@ The api endpoints expose on http://localhost:3000/api/
   **IMPORTANTE!:** Hubieste preferido tomar la decisión apoyada en el aval de _Jorge Luis Sarmiento Herrera_(Acompañamiento técnico), pero afronté el riesgo para no incomodar el fin de semana.
 
 ---
+
+## \* Features
+
+[X] Environments config
+
+[X] Code style conventions
+
+- [x] .prettierrc
+- styleguide JS definition - (partially) https://google.github.io/styleguide/jsguide.html
+
+[ ] Folder Structure
+
+- API Routes
