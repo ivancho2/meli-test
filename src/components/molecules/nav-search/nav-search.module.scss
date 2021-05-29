@@ -1,0 +1,38 @@
+.nav-search {
+  display: flex;
+  flex: 1;
+  position: relative;
+  &-input {
+    border-radius: var(--border-radius);
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    padding: 10px var(--space-sm);
+    outline: none;
+    color: var(--color-black);
+    &::placeholder {
+      color: var(--color-gray);
+    }
+  }
+  &-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 100%;
+    border: none;
+    background-color: var(--color-gray--light);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    outline: none;
+    &-icon {
+      position: relative;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
