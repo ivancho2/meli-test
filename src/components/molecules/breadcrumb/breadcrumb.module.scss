@@ -1,0 +1,17 @@
+.ui-breadcrumb {
+  font-size: 14px;
+  padding: var(--space-sm) 0;
+  color: var(--color-gray--2);
+  &__slug-item {
+    &:last-of-type {
+      font-weight: bold;
+    }
+    &:not(:last-of-type) {
+      &::after {
+        content: '\1433';
+        font-size: 10px;
+        margin: 0 0.5em;
+      }
+    }
+  }
+}
