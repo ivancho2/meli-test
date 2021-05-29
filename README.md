@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project use [Next.js](https://nextjs.org/) as an complement to React
 
-## Getting Started
+## Available Scripts
 
-First, run the development server:
+|| _NOTE: install the project dependencies before to run any script_
+
+In the project directory, you can run the development server with:
 
 ```bash
-npm run dev
-# or
 yarn dev
+# or
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The api endpoints expose on http://localhost:3000/api/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Challenge MercadoLibre
 
-## Learn More
+## \* Definición de Stack Tecnologico
 
-To learn more about Next.js, take a look at the following resources:
+- ¿Por qué usar NextJS?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  Entre los objetivos del challenge se plantean los features:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  - Solución Web (Deseable React) SEO friendly
+  - Middleware API en Node.
 
-## Deploy on Vercel
+  Estos features son abarcados por framework **NextJS** usando la configuración **SSR y API Routes**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ##### **NOTA:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  - La decisión de complementar **React** con **NextJS** consultada y avalada con _Jorge Luis Sarmiento Herrera_ (Acompañamiento técnico)
+
+---
+
+- ¿Por qué usar SSR?
+
+  Entre las alternativas **Client Side Rendering**, **Server Side Rendering** y **Static Site Generation** _(Todas configurables en NextJS)_.
+  Se tomó la decisión por realizar una solución orientada al SSR con base en los siguientes argumentos:
+
+  - SSR y SSG favorecen el SEO, siendo este uno de los criterios valorados en la solución buscada.
+  - Debido a la naturaleza del inventario de productos extenso y cambiante, se opta por SSR. Favoreciendo la escalabilidad.
+
+---
+
+- ¿Por qué usar API Routes?
+
+  Uno de los features del challenge es la elaboración de un Middleware API que procese los datos de una
+  API externa y los exponga usando el path `/api/`. Entre las posibles configuraciones que **NextJS** permite,
+  se encuentra '**API Routes**' mediante el cual se logra la implementación esperada.
+
+---
+
+##### **NOTAS:**
+
+- De manera arbitraria se toma la decisión de prescindir de la dependencia **Express** en el stack tecnológico con el objetivo de generar una solución monolítica para el alcance esperado.
+
+  **IMPORTANTE!:** Hubieste preferido tomar la decisión apoyada en el aval de _Jorge Luis Sarmiento Herrera_(Acompañamiento técnico), pero afronté el riesgo para no incomodar el fin de semana.
+
+---
