@@ -1,0 +1,55 @@
+.ui-product {
+  display: grid;
+  grid-template-areas:
+    'image details'
+    'description description';
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  background: white;
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  &__image {
+    position: relative;
+    // border-radius: var(--border-radius);
+    overflow: hidden;
+    grid-area: image;
+    width: 680px;
+    height: 680px;
+  }
+  &__details-info {
+    grid-area: details;
+    &__solds {
+      margin: 0;
+      color: var(--color-gray);
+      font-size: 14px;
+    }
+    &__name {
+      margin: var(--space-sm) 0 0 0;
+      font-size: 24px;
+      line-height: 1.18;
+    }
+    &__price {
+      margin: var(--space-lg) 0;
+      font-size: 46px;
+      &::after {
+        content: '00';
+        font-size: 0.5em;
+        vertical-align: super;
+      }
+    }
+  }
+  &__description {
+    grid-area: description;
+    padding-top: 40px;
+    &__title {
+      margin: 0;
+      font-size: 28px;
+    }
+    &__paragraph {
+      color: var(--color-gray--2);
+      font-size: 16px;
+      margin: var(--space-lg) 0;
+      max-width: 45em;
+    }
+  }
+}
