@@ -2,10 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export const ToHome = (props) => {
+import styles from './to-home.module.scss'
+
+export const ToHome = (props: { [key: string]: any }) => {
+  const classList: string = [props.className, styles['ui-to-home']].join(' ')
+
   return (
     <Link href="/">
-      <a {...props}>
+      <a {...props} className={classList}>
         <Image
           src="/assets/images/logo.png"
           width={53}

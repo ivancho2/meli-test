@@ -1,4 +1,4 @@
-// TODO: refactor code
+// TODO: refactor code with  SRP (singular responsibility principle)
 import { NextApiRequest, NextApiResponse } from 'next'
 
 import * as MeliEndPoints from '../../../src/common/meli-endponts'
@@ -31,7 +31,7 @@ export default async function handler(
     const itemDescriptionRes: IItemDescriptionResponse = await fetch(
       `${MeliEndPoints.ITEM_DATA}/${req.query.id}/description`,
       {
-        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        method: 'GET',
 
         headers: {
           'Content-Type': 'application/json',

@@ -5,8 +5,13 @@ import styles from './product-description.module.scss'
 import { Button } from '../../atoms/button/button'
 import { CONDITION } from '../../../constants/copy-convertion'
 import { formatCurrency } from '../../../utils/formatCurrency'
+import { Item } from '../../../interfaces/IInternalItemResponse'
 
-export const ProductDescription = ({ item }) => {
+type Props = {
+  item: Item
+}
+
+export const ProductDescription = ({ item }: Props) => {
   return (
     <div className={styles['ui-product']}>
       <div className={styles['ui-product__image']}>

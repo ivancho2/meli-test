@@ -2,9 +2,19 @@ import React from 'react'
 import { PageLayout } from '../../src/components/templates/page-layout/page-layout'
 import { ProductDescription } from '../../src/components/organisms/product-description/product-description'
 import { Breadcrumb } from '../../src/components/molecules/breadcrumb/breadcrumb'
+import { GetServerSideProps } from 'next'
+import { Item } from '../../src/interfaces/IInternalItemResponse'
 
-export default function ItemById({ item }) {
-  const categories = item.path_from_root
+type Props = {
+  item: Item
+}
+
+export default function ItemById(props: Props) {
+  const {
+    item,
+    item: { path_from_root: categories },
+  } = props
+
   return (
     <PageLayout>
       <Breadcrumb {...{ categories }} />
@@ -13,11 +23,10 @@ export default function ItemById({ item }) {
   )
 }
 
-export async function getServerSideProps(ctx) {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Fetch data from API on SSR
-
   try {
-    const { item } = await fetch(
+    const { item }: { item: Item[] } = await fetch(
       process.env.API_URL + `/items/${ctx.query.id}`
     ).then((res) => res.json())
 

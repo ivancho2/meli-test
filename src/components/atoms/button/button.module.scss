@@ -7,4 +7,7 @@
   border: none;
   font-size: 14px;
   padding: 0.8em;
+  &:focus {
+    outline: 1px dotted var(--color-blue-dodger);
+  }
 }

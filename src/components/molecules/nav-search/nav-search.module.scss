@@ -29,6 +29,9 @@
     align-items: center;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     outline: none;
+    &:focus {
+      outline: 1px dotted var(--color-blue-dodger);
+    }
     &-icon {
       position: relative;
       width: 18px;

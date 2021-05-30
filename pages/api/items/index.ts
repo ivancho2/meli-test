@@ -1,4 +1,4 @@
-// TODO: refactor Code
+// TODO: refactor code with  SRP (singular responsibility principle)
 
 import { NextApiRequest, NextApiResponse } from 'next'
 
@@ -44,6 +44,15 @@ export default async function handler(
   }
 }
 
+type CategoryHistogram = {
+  [key: string]: number
+}
+
+type ItemsReduce = {
+  items: IItem[]
+  categoryHistogram: CategoryHistogram
+}
+
 async function processResponse(searchResponseResults: Result[]) {
   const { items, categoryHistogram } = mapItems(searchResponseResults)
 
@@ -55,11 +64,6 @@ async function processResponse(searchResponseResults: Result[]) {
     categories,
     items,
   }
-}
-
-type ItemsReduce = {
-  items: IItem[]
-  categoryHistogram: any
 }
 
 function mapItems(items: Result[]): ItemsReduce {
@@ -100,7 +104,7 @@ function mapItems(items: Result[]): ItemsReduce {
   return itemsReduce
 }
 
-function pickTopCategory(categoryHistogram: any) {
+function pickTopCategory(categoryHistogram: CategoryHistogram) {
   return Object.keys(categoryHistogram).reduce((prev, current) => {
     if (!prev) {
       return current

@@ -78,6 +78,7 @@ The api endpoints expose on http://localhost:3000/api/
   - [Commit Naming Convention](https://dev.to/i5han3/git-commit-message-convention-that-you-can-follow-1709)
   - BEM CSS Class Naming
   - [ ] TS on UI Components
+  - Component-driven focused development (Atomic Design)
 - [x] Folder Structure
   - Atomic Design
 - [x] Design line definition

@@ -4,8 +4,13 @@ import Link from 'next/link'
 
 import { formatCurrency } from '../../../utils/formatCurrency'
 import styles from './item-card.module.scss'
+import { IItem } from '../../../interfaces/IInternalSearchResponse'
 
-export const ItemCard = ({ item }) => {
+type Props = {
+  item: IItem
+}
+
+export const ItemCard = ({ item }: Props) => {
   const toLink = `/items/${item.id}`
 
   return (
