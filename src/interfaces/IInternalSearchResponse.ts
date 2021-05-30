@@ -5,8 +5,13 @@ import { Author } from './IAuthor'
 
 export interface IInternalSearchResponse {
   author: Author
-  categories: string[]
+  categories: ICategory[]
   items: IItem[]
+}
+
+export interface ICategory {
+  id: string
+  name: string
 }
 
 export interface IItem {

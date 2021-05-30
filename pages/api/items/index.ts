@@ -1,25 +1,29 @@
-// TODO: refactor this component
-
 import { NextApiRequest, NextApiResponse } from 'next'
-import * as meliEndPoints from '../../../src/common/meli-endponts'
+
+// INTERFACES
 import {
   ISearchResponse,
   Result,
 } from '../../../src/interfaces/ISearchResponse'
-import { SIGNATURE_AUTHOR } from './../../../src/constants/author-signature'
-import { ITEMS_LIMIT } from '../../../src/constants/pagination'
+import * as MeliEndPoints from '../../../src/common/meli-endponts'
 import {
+  ICategory,
   IInternalSearchResponse,
   IItem,
 } from '../../../src/interfaces/IInternalSearchResponse'
+
+// CONSTANTS
+import { SIGNATURE_AUTHOR } from './../../../src/constants/author-signature'
+import { ITEMS_LIMIT } from '../../../src/constants/pagination'
+import { ICategoryResponse } from '../../../src/interfaces/ICategoryResponse'
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   try {
-    const searchResponse: IInternalSearchResponse = await fetch(
-      `${meliEndPoints.SEARCH_ITEMS}?q=${req.query.q}&limit=${ITEMS_LIMIT}`,
+    const data: IInternalSearchResponse = await fetch(
+      `${MeliEndPoints.SEARCH_ITEMS}?q=${req.query.q}&limit=${ITEMS_LIMIT}`,
       {
         method: 'GET',
         headers: {
@@ -29,17 +33,18 @@ export default async function handler(
     )
       .then((res) => res.json())
       .then((res: ISearchResponse) => {
-        return processResponse(res)
+        return processResponse(res.results)
       })
 
-    res.status(200).json(searchResponse)
+    res.status(200).json(data)
   } catch (error) {
     res.status(500).send('Server Error Response')
   }
 }
 
-async function processResponse(searchResponse: ISearchResponse) {
-  const { categoryHistogram, items } = mapItems(searchResponse.results)
+async function processResponse(searchResponseResults: Result[]) {
+  const { items, categoryHistogram } = mapItems(searchResponseResults)
+
   const topCategory = pickTopCategory(categoryHistogram)
   const categories = await getCategoriesPathFromRoot(topCategory)
 
@@ -105,8 +110,8 @@ function pickTopCategory(categoryHistogram: any) {
 }
 
 async function getCategoriesPathFromRoot(categoryId: string) {
-  let slugCategoryRes = await fetch(
-    `${meliEndPoints.CATEGORIES}/${categoryId}`,
+  let categoryPathRes: ICategoryResponse = await fetch(
+    `${MeliEndPoints.CATEGORIES}/${categoryId}`,
     {
       method: 'GET',
       headers: {
@@ -114,9 +119,12 @@ async function getCategoriesPathFromRoot(categoryId: string) {
       },
     }
   ).then((res) => res.json())
-  const pathFromRoot = slugCategoryRes.path_from_root.map((category) => ({
-    name: category.name,
-    id: category.id,
-  }))
+  const pathFromRoot: ICategory[] = categoryPathRes.path_from_root.map(
+    (category) => ({
+      id: category.id,
+      name: category.name,
+    })
+  )
+
   return pathFromRoot
 }
