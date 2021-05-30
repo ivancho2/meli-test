@@ -14,15 +14,21 @@ export default function ItemsSearchs({ items, categories }) {
 
 export async function getServerSideProps(ctx) {
   // Fetch data from API on SSR
-  const { items, categories } = await fetch(
-    process.env.API_URL + `/items?q=${ctx.query.search}`
-  ).then((res) => res.json())
 
-  // Pass data to the page via props
-  return {
-    props: {
-      items,
-      categories,
-    },
+  try {
+    const { items, categories } = await fetch(
+      process.env.API_URL + `/items?q=${ctx.query.search}`
+    ).then((res) => res.json())
+
+    // Pass data to the page via props
+    return {
+      props: {
+        items,
+        categories,
+      },
+    }
+  } catch (error) {
+    // TODO: add 404 page
+    return { props: {} }
   }
 }
