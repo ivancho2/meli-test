@@ -1,3 +1,5 @@
+// TODO: refactor Code
+
 import { NextApiRequest, NextApiResponse } from 'next'
 
 // INTERFACES
@@ -69,7 +71,7 @@ function mapItems(items: Result[]): ItemsReduce {
         price: {
           currency: current.prices.presentation.display_currency,
           amount: current.price,
-          decimals: 0, // TODO: find
+          decimals: 0, // TODO: find data
         },
         picture: current.thumbnail,
         condition: current.condition,
