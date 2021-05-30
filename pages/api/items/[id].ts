@@ -7,11 +7,11 @@ import * as MeliEndPoints from '../../../src/common/meli-endponts'
 import { IInternalItemResponse } from '../../../src/interfaces/IInternalItemResponse'
 import { ICategoryResponse } from '../../../src/interfaces/ICategoryResponse'
 import { ICategory } from '../../../src/interfaces/IInternalSearchResponse'
+import { IItemResponse } from '../../../src/interfaces/IItemResponse'
+import { IItemDescriptionResponse } from '../../../src/interfaces/IItemDescriptionResponse'
 
 // CONSTANTS
 import { SIGNATURE_AUTHOR } from './../../../src/constants/author-signature'
-import { IItemResponse } from '../../../src/interfaces/IItemResponse'
-import { IItemDescriptionResponse } from '../../../src/interfaces/IItemDescriptionResponse'
 
 export default async function handler(
   req: NextApiRequest,

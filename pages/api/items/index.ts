@@ -1,5 +1,3 @@
-// TODO: refactor code with  SRP (singular responsibility principle)
-
 import { NextApiRequest, NextApiResponse } from 'next'
 
 // INTERFACES
@@ -13,11 +11,11 @@ import {
   IInternalSearchResponse,
   IItem,
 } from '../../../src/interfaces/IInternalSearchResponse'
+import { ICategoryResponse } from '../../../src/interfaces/ICategoryResponse'
 
 // CONSTANTS
 import { SIGNATURE_AUTHOR } from './../../../src/constants/author-signature'
 import { ITEMS_LIMIT } from '../../../src/constants/pagination'
-import { ICategoryResponse } from '../../../src/interfaces/ICategoryResponse'
 
 export default async function handler(
   req: NextApiRequest,
