@@ -42,7 +42,7 @@ export const ItemCard = ({ item }) => {
         </Link>
       </div>
       <div className={styles['item-card__description__location']}>
-        <span>{item.seller_address.state.name}</span>
+        <span>{item.seller_address}</span>
       </div>
     </div>
   )
