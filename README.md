@@ -4,6 +4,12 @@ This project use [Next.js](https://nextjs.org/) as an complement to React
 
 || _NOTE: install the project dependencies before to run any script_
 
+```bash
+yarn
+# or
+npm i
+```
+
 In the project directory, you can run the development server with:
 
 ```bash
@@ -63,15 +69,51 @@ The api endpoints expose on http://localhost:3000/api/
 
 ---
 
-## \* Features
+## \* Features Planning
 
-[X] Environments config
+- [x] Env config
+- [x] Code style conventions
+  - [x] .prettierrc
+  - [Google Styleguide JS definition](https://google.github.io/styleguide/jsguide.html) - partially
+  - [Commit Naming Convention](https://dev.to/i5han3/git-commit-message-convention-that-you-can-follow-1709)
+  - BEM CSS Class Naming
+- [x] Folder Structure
+  - Atomic Design
+- [x] Design line definition
+  - [x] Fonts (whith preload)
+  - [x] Variables --css
+- UI
+  - [x] Home Page
+    - [x] Search Component
+    - [ ] Skeleton Component
+  - [x] Search Page
+  - [x] Product Page
+- SSR Logic and Render
+  - [x] Home Page
+  - [x] Search Page
+  - [ ] Product Page
+- API
+  - [x] GET `/api/items?q=`
+  - [ ] GET `/api/items/:id`
+- Usability, SEO, Performance
+  - [x] Meta Info
+  - [ ] sitemap.xml
+  - [-] Web Core Vitals
+    - [x] Implement Image component from `next/image`
+  - [x] Lighthouse Scan (DEV)
+  - [x] tabIndex navigation
+- Testing
+  - [ ] Unit Test
 
-[X] Code style conventions
+---
 
-- [x] .prettierrc
-- styleguide JS definition - (partially) https://google.github.io/styleguide/jsguide.html
+---
 
-[ ] Folder Structure
+### \* References
 
-- API Routes
+- **Commit Naming Convention** - https://dev.to/i5han3/git-commit-message-convention-that-you-can-follow-1709
+- **React** - https://es.reactjs.org
+- **NextJS** - https://nextjs.org - https://nextjs.org/docs/api-routes/introduction
+- **Sass** - https://sass-lang.com
+- **BEM CSS** - http://getbem.com/naming/
+- **Folder structure** - Atomic Design - https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97
