@@ -3,21 +3,25 @@ import Image from 'next/image'
 
 import styles from './product-description.module.scss'
 import { Button } from '../../atoms/button/button'
+import { CONDITION } from '../../../constants/copy-convertion'
+import { formatCurrency } from '../../../utils/formatCurrency'
 
-export const ProductDescription = () => {
+export const ProductDescription = ({ item }) => {
   return (
     <div className={styles['ui-product']}>
       <div className={styles['ui-product__image']}>
-        <Image src="/assets/images/680.png" alt="TODO: add" layout="fill" />
+        <Image src={item.picture} alt={item.title} layout="fill" />
       </div>
       <div className={styles['ui-product__details-info']}>
         <h4 className={styles['ui-product__details-info__solds']}>
-          Nuevo - 2 vendidos
+          {CONDITION[item.condition]} - {item.sold_quantity} vendidos
         </h4>
         <h1 className={styles['ui-product__details-info__name']}>
-          Deco Reverse Sombrero Oxford
+          {item.title}
         </h1>
-        <h2 className={styles['ui-product__details-info__price']}>$ 1.980</h2>
+        <h2 className={styles['ui-product__details-info__price']}>
+          {formatCurrency(item.price.amount)}
+        </h2>
         <Button text={'Comprar'} />
       </div>
       <div className={styles['ui-product__description']}>
@@ -25,11 +29,7 @@ export const ProductDescription = () => {
           Descripción del producto
         </h3>
         <p className={styles['ui-product__description__paragraph']}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fugit
-          exercitationem nemo quibusdam illo, eum quaerat aut dolor expedita
-          consequuntur cumque? Nisi, unde illum! Ducimus magni expedita debitis
-          culpa vitae? Vitae facilis nulla tempore architecto dignissimos. Fuga,
-          expedita tempora enim laborum modi? Sunt!
+          {item.description || 'Sin descripción'}
         </p>
       </div>
     </div>
