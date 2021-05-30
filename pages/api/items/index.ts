@@ -17,8 +17,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log('request')
-
   try {
     const searchResponse: IInternalSearchResponse = await fetch(
       `${meliEndPoints.SEARCH_ITEMS}?q=${req.query.q}&limit=${ITEMS_LIMIT}`,
@@ -60,10 +58,6 @@ type ItemsReduce = {
 function mapItems(items: Result[]): ItemsReduce {
   const itemsReduce: ItemsReduce = items.reduce(
     (prev: ItemsReduce, current: Result) => {
-      console.log('reduce')
-      // console.log(prev)
-      console.log(current.category_id)
-
       const data: IItem = {
         id: current.id,
         title: current.title,
@@ -92,7 +86,6 @@ function mapItems(items: Result[]): ItemsReduce {
             (prev.categoryHistogram[current.category_id] || 0) + 1,
         },
       }
-      // return prev
     },
     undefined
   )
