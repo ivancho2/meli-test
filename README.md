@@ -77,7 +77,7 @@ The api endpoints expose on http://localhost:3000/api/
   - [Google Styleguide JS definition](https://google.github.io/styleguide/jsguide.html) - partially
   - [Commit Naming Convention](https://dev.to/i5han3/git-commit-message-convention-that-you-can-follow-1709)
   - BEM CSS Class Naming
-  - [ ] TS on UI Components
+  - [x] TS on UI Components
   - Component-driven focused development (Atomic Design)
 - [x] Folder Structure
   - Atomic Design
@@ -88,27 +88,29 @@ The api endpoints expose on http://localhost:3000/api/
 - UI
   - [x] Home Page
     - [x] Search Component
-    - [ ] Skeleton Component
+    - [x] Skeleton Component
   - [x] Search Page
   - [x] Product Page
 - [ ] Responsive Design
 - SSR Logic and Render
   - [x] Home Page
   - [x] Search Page
-  - [ ] Product Page
+  - [x] Product Page
 - API
   - [x] GET `/api/items?q=`
-  - [ ] GET `/api/items/:id`
+  - [x] GET `/api/items/:id`
 - Usability, SEO, Performance
   - [x] Meta Info
   - [x] tabIndex navigation
   - [x] aria-label tags
   - [-] Web Core Vitals
     - [x] Implement Image component from `next/image`
+    - [x] SSR
   - [x] Lighthouse Scan (DEV)
   - [ ] sitemap.xml
 - Testing
   - [ ] Unit Test
+  - [ ] Integration Test
 
 ## \* Future Features
 
