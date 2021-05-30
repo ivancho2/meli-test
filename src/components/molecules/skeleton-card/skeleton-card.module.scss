@@ -12,7 +12,7 @@
     width: 180px;
     height: 180px;
     background: white;
-    filter: contrast(0.9);
+    filter: contrast(0.93);
     transform: translateY(-50%);
     border-radius: var(--border-radius);
   }
@@ -24,7 +24,7 @@
     width: calc(100% - 180px - var(--space-lg) * 3);
     height: 160px;
     background: white;
-    filter: contrast(0.9);
+    filter: contrast(0.95);
     transform: translateY(-50%);
     border-radius: var(--border-radius);
   }
