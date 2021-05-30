@@ -7,7 +7,7 @@ export interface ICategoryResponse {
   picture: string
   permalink: null
   total_items_in_this_category: number
-  path_from_root: PathFromRoot[]
+  path_from_root: IPathFromRoot[]
   children_categories: any[]
   attribute_types: string
   settings: Settings
@@ -17,7 +17,7 @@ export interface ICategoryResponse {
   date_created: string
 }
 
-export interface PathFromRoot {
+export interface IPathFromRoot {
   id: string
   name: string
 }

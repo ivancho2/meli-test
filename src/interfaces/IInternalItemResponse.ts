@@ -2,6 +2,7 @@
 // /api/items/:id
 
 import { Author } from './IAuthor'
+import { ICategory } from './IInternalSearchResponse'
 
 export interface IInternalItemResponse {
   author: Author
@@ -17,6 +18,7 @@ export interface Item {
   free_shipping: boolean
   sold_quantity: number
   description: string
+  path_from_root: ICategory[]
 }
 
 export interface Price {
