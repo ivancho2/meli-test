@@ -46,7 +46,7 @@ The api endpoints expose on http://localhost:3000/api/
 - ¿Por qué usar SSR?
 
   Entre las alternativas **Client Side Rendering**, **Server Side Rendering** y **Static Site Generation** _(Todas configurables en NextJS)_.
-  Se tomó la decisión por realizar una solución orientada al SSR con base en los siguientes argumentos:
+  Se tomó la decisión de realizar una solución orientada al SSR con base en los siguientes argumentos:
 
   - SSR y SSG favorecen el SEO, siendo este uno de los criterios valorados en la solución buscada.
   - Debido a la naturaleza del inventario de productos extenso y cambiante, se opta por SSR. Favoreciendo la escalabilidad.
@@ -77,7 +77,7 @@ The api endpoints expose on http://localhost:3000/api/
   - [Google Styleguide JS definition](https://google.github.io/styleguide/jsguide.html) - partially
   - [Commit Naming Convention](https://dev.to/i5han3/git-commit-message-convention-that-you-can-follow-1709)
   - BEM CSS Class Naming
-  - [x] TS on UI Components
+  - [x] TS
   - Component-driven focused development (Atomic Design)
 - [x] Folder Structure
   - Atomic Design
@@ -103,21 +103,22 @@ The api endpoints expose on http://localhost:3000/api/
   - [x] Meta Info
   - [x] tabIndex navigation
   - [x] aria-label tags
+  - [x] aria-role tags
   - [-] Web Core Vitals
     - [x] Implement Image component from `next/image`
     - [x] SSR
   - [x] Lighthouse Scan (DEV)
-  - [ ] sitemap.xml
+
 - Testing
   - [ ] Unit Test
-  - [ ] Integration Test
 
 ## \* Future Features
 
 - [ ] StoryBook with Atomic Design
 - Usability, SEO, Performance
   - [x] Lighthouse Scan (deploy)
-
+  - [ ] sitemap.xml
+  - [ ] Canonical URL
 ---
 
 ---
