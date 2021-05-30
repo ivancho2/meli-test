@@ -97,11 +97,12 @@ The api endpoints expose on http://localhost:3000/api/
   - [ ] GET `/api/items/:id`
 - Usability, SEO, Performance
   - [x] Meta Info
-  - [ ] sitemap.xml
+  - [x] tabIndex navigation
+  - [x] aria-label tags
   - [-] Web Core Vitals
     - [x] Implement Image component from `next/image`
   - [x] Lighthouse Scan (DEV)
-  - [x] tabIndex navigation
+  - [ ] sitemap.xml
 - Testing
   - [ ] Unit Test
 
