@@ -82,6 +82,7 @@ The api endpoints expose on http://localhost:3000/api/
   - Atomic Design
 - [x] Design line definition
   - [x] Fonts (whith preload)
+    - take from oficial page ML
   - [x] Variables --css
 - UI
   - [x] Home Page
@@ -89,6 +90,7 @@ The api endpoints expose on http://localhost:3000/api/
     - [ ] Skeleton Component
   - [x] Search Page
   - [x] Product Page
+- [ ] Responsive Design
 - SSR Logic and Render
   - [x] Home Page
   - [x] Search Page
