@@ -6,16 +6,17 @@ import { Author } from './IAuthor'
 export interface IInternalSearchResponse {
   author: Author
   categories: string[]
-  items: Item[]
+  items: IItem[]
 }
 
-export interface Item {
+export interface IItem {
   id: string
   title: string
   price: Price
   picture: string
   condition: string
   free_shipping: boolean
+  seller_address: string // add
 }
 
 export interface Price {
