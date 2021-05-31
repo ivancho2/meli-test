@@ -6,10 +6,10 @@ import { ICategory } from './IInternalSearchResponse'
 
 export interface IInternalItemResponse {
   author: Author
-  item: Item
+  item: IItemData
 }
 
-export interface Item {
+export interface IItemData {
   id: string
   title: string
   price: Price

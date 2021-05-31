@@ -8,8 +8,8 @@ import { ICategory, IItem } from '../../src/interfaces/IInternalSearchResponse'
 import { SkeletonCard } from '../../src/components/molecules/skeleton-card/skeleton-card'
 
 type Props = {
-  items: IItem[]
-  categories: ICategory[]
+  items?: IItem[]
+  categories?: ICategory[]
 }
 
 export default function ItemsSearchs({ items, categories }: Props) {
@@ -26,7 +26,7 @@ export default function ItemsSearchs({ items, categories }: Props) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   // Fetch data from API on SSR
   try {
     const { items, categories } = await fetch(

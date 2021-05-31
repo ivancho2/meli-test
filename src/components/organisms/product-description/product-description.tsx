@@ -5,10 +5,10 @@ import styles from './product-description.module.scss'
 import { Button } from '../../atoms/button/button'
 import { CONDITION } from '../../../constants/copy-convertion'
 import { formatCurrency } from '../../../utils/formatCurrency'
-import { Item } from '../../../interfaces/IInternalItemResponse'
+import { IItemData } from '../../../interfaces/IInternalItemResponse'
 
 type Props = {
-  item: Item
+  item: IItemData
 }
 
 export const ProductDescription = ({ item }: Props) => {
