@@ -1,3 +1,5 @@
+@import './../../../styles/mixins.scss';
+
 .ui-product {
   display: grid;
   grid-template-areas:
@@ -8,6 +10,9 @@
   background: white;
   border-radius: var(--border-radius);
   padding: var(--space-lg);
+  @include FromMaxXLarge() {
+    display: block;
+  }
   &__image {
     position: relative;
     // border-radius: var(--border-radius);
@@ -15,6 +20,12 @@
     grid-area: image;
     width: 680px;
     height: 680px;
+    @include FromMaxXLarge() {
+      display: inline-block;
+      padding-top: 100%;
+      width: 100%;
+      height: initial;
+    }
   }
   &__details-info {
     grid-area: details;

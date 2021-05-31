@@ -1,0 +1,19 @@
+/* Breakpoints */
+$small: 320px;
+$x-small: 370px;
+$medium: 761px;
+$large: 960px;
+$x-large: 1024px;
+$xx-large: 1200px;
+$xxx-large: 1500px;
+
+@mixin FromMaxMedium() {
+  @media (max-width: $medium) {
+    @content;
+  }
+}
+@mixin FromMaxXLarge() {
+  @media (max-width: $x-large) {
+    @content;
+  }
+}
