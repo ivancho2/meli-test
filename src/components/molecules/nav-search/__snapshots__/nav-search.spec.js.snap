@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nav-search snap: render with value 1`] = `
+<body>
+  <div>
+    <form
+      action="/items?"
+      class="nav-search"
+      method="GET"
+      role="search"
+    >
+      <input
+        aria-label="Ingresa lo que quieras encontrar"
+        autocapitalize="off"
+        autocomplete="off"
+        autocorrect="off"
+        class="nav-search-input"
+        maxlength="120"
+        name="search"
+        placeholder="Nunca dejes de buscar"
+        required=""
+        spellcheck="false"
+        tabindex="0"
+        type="text"
+        value="hello"
+      />
+      <button
+        class="nav-search-btn"
+        tabindex="0"
+        type="submit"
+      >
+        <span
+          class="nav-search-btn-icon"
+        >
+          <div
+            style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+          >
+            <noscript />
+            <img
+              alt="Lupa"
+              decoding="async"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </div>
+        </span>
+      </button>
+    </form>
+  </div>
+</body>
+`;
