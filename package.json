@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "yarn jest",
+    "test:watch": "yarn jest --watch"
   },
   "dependencies": {
     "next": "10.2.3",
