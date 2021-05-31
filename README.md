@@ -77,7 +77,7 @@ The api endpoints expose on http://localhost:3000/api/
   - [Google Styleguide JS definition](https://google.github.io/styleguide/jsguide.html) - partially
   - [Commit Naming Convention](https://dev.to/i5han3/git-commit-message-convention-that-you-can-follow-1709)
   - BEM CSS Class Naming
-  - [x] TS
+  - [x] Typescript
   - Component-driven focused development (Atomic Design)
 - [x] Folder Structure
   - Atomic Design
@@ -91,7 +91,7 @@ The api endpoints expose on http://localhost:3000/api/
     - [x] Skeleton Component
   - [x] Search Page
   - [x] Product Page
-- [ ] Responsive Design
+- [x] Responsive Design
 - SSR Logic and Render
   - [x] Home Page
   - [x] Search Page
@@ -110,13 +110,13 @@ The api endpoints expose on http://localhost:3000/api/
   - [x] Lighthouse Scan (DEV)
 
 - Testing
-  - [ ] Unit Test
+  - [x] Unit Test
 
 ## \* Future Features
 
 - [ ] StoryBook with Atomic Design
 - Usability, SEO, Performance
-  - [x] Lighthouse Scan (deploy)
+  - [ ] Lighthouse Scan (deploy)
   - [ ] sitemap.xml
   - [ ] Canonical URL
 ---
